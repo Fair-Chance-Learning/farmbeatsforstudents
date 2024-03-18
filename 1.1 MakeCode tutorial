@@ -1,5 +1,5 @@
-FarmBeats for Students- Soil Moisture Hands-On Activity
-## Introduction @unplugged
+FarmBeats for Students- Soil Moisture Hands-On Activity 1.1
+## FarmBeats for Students Activity 1.1 @unplugged
 <img style="display: block; margin-left: auto; margin-right: auto;" src="/static/mb/projects/soil-moisture/nailsv3.jpg"  width="50%" height="50%">
 
 Welcome to the FarmBeats for Students hands-on activity!
@@ -45,11 +45,12 @@ basic.forever(() => {
 })
 ```
 
-## Connect Your Alligator Clips
+## Assemble for Sensor
 
 Connect one end of the alligator clip to a nail and attach the other end to the number **0** at the bottom of your micro:bit. Attach the other end of the alligator clip that is linked to your second nail, to the **3V** pin at the base of your micro:bit.
 
-<img style="display: block; margin-left: auto; margin-right: auto;" src="(https://github.com/Fair-Chance-Learning/farmbeatsforstudents/issues/1#issue-2188809516" width="50%" height="50%"> 
+For follow along video instruction click here: https://youtu.be/S8NppVT_paw?si=WCvwd-tV5Q8zsydB
+
 
 
 ## Download your program to the micro:bit
@@ -118,3 +119,4 @@ basic.forever(() => {
 
 })
 ```
+    
