@@ -1,0 +1,120 @@
+FarmBeats for Students- Soil Moisture Hands-On Activity
+## Introduction @unplugged
+<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/mb/projects/soil-moisture/nailsv3.jpg"  width="50%" height="50%">
+
+Welcome to the FarmBeats for Students hands-on activity!
+In this activity you will code your moisture meter using a cup of dry dirt and wet dirt. This is so you can set the micro:bit to know what both dry and wet conditions are. 
+
+The water and nutrients in the soil affect its electrical resistance, which is how much it resists the flow of electricity. The water itself does not carry electricity, but the nutrients do. The soil behaves like a variable resistor in an electronic circuit. When there is more water and nutrients in the soil, the soil has more conductivity and less electrical resistance.
+
+## Displaying the measured moisture level
+
+We want to show the moisture level in the soil as a graph of values that are collected over time. To do this, open the Toolbox, select the ``||led:Led||`` tray and drag the ``||led:plot bar graph||`` block inside the ``||basic:forever||`` block.
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph()
+})
+```
+
+## Assigning the measured value to the graph
+
+To measure the moisture in the soil, we need to read the voltage on pin **P0**. 
+
+From the advanced menu, select the ``||pins:Pins||`` tray, and drag the ``||pins:analog read pin||`` inside the first ``0`` of the ``||led:plot bar graph||`` you set in the previous step.
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph(
+        pins.analogReadPin(AnalogPin.P0),
+        0
+    )
+})
+```
+
+## Setting the maximum value to the graph
+
+The values returned from **P0** will range between ``0`` (no current) and ``1023`` (maximum current). Since we will have no values greater than ``1023``, let's set the maximum value of the graph y axis to ``1023``. To set the maximum value, click inside the remaining ``0`` of your ``||led:plot bar graph||`` block and type in ``1023``.
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph(
+        pins.analogReadPin(AnalogPin.P0),
+        1023
+    )
+})
+```
+
+## Connect Your Alligator Clips
+
+Connect one end of the alligator clip to a nail and attach the other end to the number **0** at the bottom of your micro:bit. Attach the other end of the alligator clip that is linked to your second nail, to the **3V** pin at the base of your micro:bit.
+
+<img style="display: block; margin-left: auto; margin-right: auto;" src="(https://github.com/Fair-Chance-Learning/farmbeatsforstudents/issues/1#issue-2188809516" width="50%" height="50%"> 
+
+
+## Download your program to the micro:bit
+
+Once your micro:bit is connected, you can easily move programs from MakeCode to your device. Here are the steps to get setup:
+
+1. Connect your micro:bit to your computer using a USB cable.
+2. Clicking on the three dots next to the "Download" button and choosing "Connect Device".
+3. Follow the instructions to choose your micro:bit. 
+4. The program will be transferred to the micro:bit and will start running automatically.
+
+## Let's experiment!
+When you... 
+* Insert the nails in the dry dirt and you should see most LEDs turn **off**.
+* Insert the nail in the wet dirt and you should see most LEDs turn **on**.
+
+Record your findings on your data collection sheet.
+
+## Using the "A" Button 
+
+In the previous steps, since the values are displaying on the micro:bit's screen, we will only have a rough idea of what the soil moisture values are. Let's add code that displays the current numerical reading when button **A** is pressed.
+
+In the ``||Logic:Logic||`` tray, drag the ``||logic:if true then||`` into the ``||basic:forever||`` block under the ``||led:plot bar graph||`` you already have in place. Then, from the ``||input:Input||`` tray, drag the ``||Input:button A is pressed||`` block in between the **if** and **then**, replacing the ``||logic:true||`` value. 
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph(
+        pins.analogReadPin(AnalogPin.P0),
+        1023)
+    if (input.buttonIsPressed(Button.A))}
+```
+## Display the moisture value numerical value
+
+In the ``||basic:Basic||`` tray, drag the ``||basic:show number||`` block inside the  ``||logic:if true then||`` you previously set. Then, in the ``||pins:Pins||`` tray under the advanced menu option, drag the ``||pins:analog read pin||`` to replace the ``0`` in the ``||basic:show number||`` block.
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph(
+        pins.analogReadPin(AnalogPin.P0),
+        1023)
+    if (input.buttonIsPressed(Button.A))
+        basic.showNumber(
+            pins.analogReadPin(AnalogPin.P0
+            ))}
+```
+
+## Download your program to the micro:bit
+
+As a reminder, we will need to transfer the updated program to your micro:bit:
+
+1. Connect your micro:bit to your computer using a USB cable.
+2. Click the "Download" button.
+3. The program will be transferred to the micro:bit and will start running automatically.
+
+## Let's experiment, again!
+
+Test and record the **P0** input values for both very dry dirt and for dirt that is wet. This will let you know the what the moisture scale of your meter is. The dry soil will have a low value and the wet soil will have a higher value.
+
+1. Insert the nails in the dry dirt, press **A** and record the value.
+2. Insert the nails in the wet dirt, press **A** and record the value.
+
+Record your findings on your data collection sheet.
+
+```template
+basic.forever(() => {
+
+})
+```
