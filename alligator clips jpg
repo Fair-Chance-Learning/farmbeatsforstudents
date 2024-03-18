@@ -1,2 +1,3 @@
 git add <picture_Image(14).jpg>
+git commit -m "Add  <picture_Image(14).jpg>"
 git push origin master
