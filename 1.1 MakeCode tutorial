@@ -2,14 +2,16 @@ FarmBeats for Students- Soil Moisture Hands-On Activity 1.1
 ## FarmBeats for Students Activity 1.1 @unplugged
 <img style="display: block; margin-left: auto; margin-right: auto;" src="/static/mb/projects/soil-moisture/nailsv3.jpg"  width="50%" height="50%">
 
-Welcome to the FarmBeats for Students hands-on activity!
+Welcome to the FarmBeats for Students hands-on activity 1.1!
 In this activity you will code your moisture meter using a cup of dry dirt and wet dirt. This is so you can set the micro:bit to know what both dry and wet conditions are. 
 
-The water and nutrients in the soil affect its electrical resistance, which is how much it resists the flow of electricity. The water itself does not carry electricity, but the nutrients do. The soil behaves like a variable resistor in an electronic circuit. When there is more water and nutrients in the soil, the soil has more conductivity and less electrical resistance.
+The water and nutrients in the soil affect its electrical resistance, which is how much it resists the flow of electricity. The water itself does not carry electricity, but the nutrients in the soil do. The soil behaves like a variable resistor in an electronic circuit. When there is more water and nutrients in the soil, the soil has more conductivity and less electrical resistance.
 
 ## Displaying the measured moisture level
+Let's get started! First, we will create some code to measure values. 
 
-We want to show the moisture level in the soil as a graph of values that are collected over time. To do this, open the Toolbox, select the ``||led:Led||`` tray and drag the ``||led:plot bar graph||`` block inside the ``||basic:forever||`` block.
+We want to show the moisture level in the soil as a graph of values that are collected over time. 
+To do this, from the Toolbox on the left side of the screen, select the ``||led:Led||`` tray and drag the ``||led:plot bar graph||`` block inside the ``||basic:forever||`` block.
 
 ```blocks
 basic.forever(() => {
@@ -46,6 +48,7 @@ basic.forever(() => {
 ```
 
 ## Assemble for Sensor
+Now that we have created the code to measure the values, we need to assemble the sensor.
 
 Connect one end of the alligator clip to a nail and attach the other end to the number **0** at the bottom of your micro:bit. Attach the other end of the alligator clip that is linked to your second nail, to the **3V** pin at the base of your micro:bit.
 
@@ -71,9 +74,9 @@ Record your findings on your data collection sheet.
 
 ## Using the "A" Button 
 
-In the previous steps, since the values are displaying on the micro:bit's screen, we will only have a rough idea of what the soil moisture values are. Let's add code that displays the current numerical reading when button **A** is pressed.
+In the previous steps, since the values are displaying on the micro:bit's screen, we will only have a rough idea of what the soil moisture values are due to the size of the screen. Let's add code that displays the current numerical reading when button **A** is pressed.
 
-In the ``||Logic:Logic||`` tray, drag the ``||logic:if true then||`` into the ``||basic:forever||`` block under the ``||led:plot bar graph||`` you already have in place. Then, from the ``||input:Input||`` tray, drag the ``||Input:button A is pressed||`` block in between the **if** and **then**, replacing the ``||logic:true||`` value. 
+In the ``||Logic:Logic||`` tray, drag the ``||logic:if true then||`` block into the ``||basic:forever||`` block under the ``||led:plot bar graph||`` block you already have in place. Then, from the ``||input:Input||`` tray, drag the ``||Input:button A is pressed||`` block in between the **if** and **then**, replacing the ``||logic:true||`` value. 
 
 ```blocks
 basic.forever(() => {
@@ -119,4 +122,3 @@ basic.forever(() => {
 
 })
 ```
-    
