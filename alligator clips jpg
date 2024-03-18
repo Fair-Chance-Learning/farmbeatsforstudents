@@ -2,3 +2,4 @@ git add <picture_Image(14).jpg>
 git commit -m "Add  <picture_Image(14).jpg>"
 git push origin master
 <img style="display: block; margin-left: auto; margin-right: auto;" src=Image (14).jpg width="50%" height="50%"> 
+<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/https://github.com/Fair-Chance-Learning/farmbeatsforstudents/blob/main/Image%20(14).jpg" width="50%" height="50%">
